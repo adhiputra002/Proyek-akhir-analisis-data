@@ -9,7 +9,7 @@ st.title("📊 Dashboard Analisis Data Polusi Udara")
 # **Load dataset dengan cache**
 @st.cache_data
 def load_data():
-    df = pd.read_csv("../data/PRSA_Data_Nongzhanguan_20130301-20170228.csv")
+    df = pd.read_csv("data/PRSA_Data_Nongzhanguan_20130301-20170228.csv")
 
     # Gabungkan kolom menjadi datetime
     df['date'] = pd.to_datetime(df[['year', 'month', 'day', 'hour']], errors='coerce')
